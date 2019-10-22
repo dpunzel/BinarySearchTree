@@ -2,14 +2,14 @@ package binarysearchtree;
 
 public class App {
     public static void main(String[] args) {
-        Tree<Integer> bst = new BinarySearchTree<>();
+        Tree<String> bst = new BinarySearchTree<>();
 
-        bst.insert(10);
-        bst.insert(-1);
-        bst.insert(1);
-        bst.insert(0);
-        bst.insert(1000);
-        bst.insert(-22);
+        bst.insert("Zany");
+        bst.insert("Tommy");
+        bst.insert("Madden");
+        bst.insert("Cory");
+        bst.insert("Hector");
+        bst.insert("Adam");
 
 //        System.out.println(bst.getMaxValue());
 //        System.out.println(bst.getMinValue());

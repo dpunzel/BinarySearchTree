@@ -35,7 +35,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements Tree<T> {
     }
 
     private void inOrderTraversal(Node<T> node) {
-        // if not left child not null, recursively search leftChild
+        // if left child not null, recursively search leftChild
         if (node.getLeftChild() != null)
             inOrderTraversal(node.getLeftChild());
         System.out.print(node + "  -->  ");
