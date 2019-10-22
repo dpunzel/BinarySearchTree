@@ -54,7 +54,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements Tree<T> {
         // than the node we want to remove, consider the left sub tree
         if (data.compareTo(node.getData()) < 0 ) {
             node.setLeftChild(delete(node.getLeftChild(), data));
-        } else if (data.compareTo(node.getData()) < 0){
+        } else if (data.compareTo(node.getData()) > 0){
             node.setRightChild(delete(node.getRightChild(), data));
         } else {
             // we have found the node we want to remove
