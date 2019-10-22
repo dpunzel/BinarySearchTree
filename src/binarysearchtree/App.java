@@ -11,8 +11,9 @@ public class App {
         bst.insert(1000);
         bst.insert(-22);
 
-        System.out.println(bst.getMaxValue());
-        System.out.println(bst.getMinValue());
+//        System.out.println(bst.getMaxValue());
+//        System.out.println(bst.getMinValue());
+        bst.traversal();
 
     }
 }
