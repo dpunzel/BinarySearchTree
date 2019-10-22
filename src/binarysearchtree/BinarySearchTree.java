@@ -44,6 +44,18 @@ public class BinarySearchTree<T extends Comparable<T>> implements Tree<T> {
             inOrderTraversal(node.getRightChild());
     }
 
+    private Node<T> delete(Node<T> node, T data) {
+
+        // if node is null return node
+        if (node == null) return node;
+
+        // if the given data to be removed is smaller
+        // than the node we want to remove, consider the left sub tree
+        if (data.compareTo(node.getData()) < 0 ) {
+            node.setLeftChild(delete(node.getLeftChild(), data));
+        }
+        return null;
+    }
 
     private void insertNode(T newData, Node<T> node) {
         // check if greater or smaller
@@ -70,7 +82,8 @@ public class BinarySearchTree<T extends Comparable<T>> implements Tree<T> {
 
     @Override
     public void delete(T data) {
-
+        if (root != null)
+            root = delete(root, data);
     }
 
 
