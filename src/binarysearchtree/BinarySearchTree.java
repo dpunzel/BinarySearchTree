@@ -10,6 +10,37 @@ public class BinarySearchTree<T extends Comparable<T>> implements Tree<T> {
     }
 
     @Override
+    public Node<T> getKSmallest(Node<T> node, int k) {
+        // number of nodes in the left subtree
+        // + 1 because we count the root
+        int n = treeSize(node.getLeftChild()) + 1;
+        // this is when we find the kth smallest item
+        if (n == k) {
+            return node;
+        }
+
+        // if the number of nodes in the left subtree > k-th smallest item
+        // the k-th smallest item is in the left sub tree
+        if (n > k) return getKSmallest(node.getLeftChild(), k);
+
+        // if number of nodes in the left subtree is smaller then the k-th
+        //smallest item then we can consider the right subtree
+        if (n < k) return getKSmallest(node.getRightChild(), k - n);
+
+        return null;
+    }
+
+    // helper method to calculate size of subtree with root node 'node'
+    private int treeSize(Node<T> node) {
+        // base case
+        if (node == null) return 0;
+
+        // recursively sum up the size of left + size of right subtree
+        // size of tree = size of left + right + 1 for root
+        return (treeSize(node.getLeftChild()) + treeSize(node.getRightChild()) + 1);
+    }
+
+    @Override
     public void insert(T data) {
         if (root == null) {
             root = new Node<T>(data);

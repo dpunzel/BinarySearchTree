@@ -6,22 +6,24 @@ public class App {
         Tree<Integer> bst = new BinarySearchTree<>();
 
         bst.insert(2);
-        bst.insert(22);
-        bst.insert(222);
-        bst.insert(2222);
-        bst.insert(22222);
+        bst.insert(55);
+        bst.insert(67);
+        bst.insert(12);
+        bst.insert(11);
 
-        Tree<Integer> bst2 = new BinarySearchTree<>();
+        System.out.println(bst.getKSmallest(bst.getRoot(), 4));
 
-        bst2.insert(2);
-        bst2.insert(21);
-        bst2.insert(222);
-        bst2.insert(2222);
-        bst2.insert(22222);
-
-        TreeCompareHelper<Integer> helper = new TreeCompareHelper<>();
-
-        System.out.println(helper.compareTrees(bst.getRoot(), bst2.getRoot()));
+//        Tree<Integer> bst2 = new BinarySearchTree<>();
+//
+//        bst2.insert(2);
+//        bst2.insert(21);
+//        bst2.insert(222);
+//        bst2.insert(2222);
+//        bst2.insert(22222);
+//
+//        TreeCompareHelper<Integer> helper = new TreeCompareHelper<>();
+//
+//        System.out.println(helper.compareTrees(bst.getRoot(), bst2.getRoot()));
 
 //        Tree<Person> bst = new BinarySearchTree<>();
 //
