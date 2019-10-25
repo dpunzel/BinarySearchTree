@@ -5,6 +5,11 @@ public class BinarySearchTree<T extends Comparable<T>> implements Tree<T> {
     private Node<T> root;
 
     @Override
+    public Node<T> getRoot() {
+        return this.root;
+    }
+
+    @Override
     public void insert(T data) {
         if (root == null) {
             root = new Node<T>(data);
