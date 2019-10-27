@@ -2,16 +2,28 @@ package binarysearchtree;
 
 public class App {
     public static void main(String[] args) {
+        Tree<Person> bst = new BinarySearchTree<>();
 
-        Tree<Integer> bst = new BinarySearchTree<>();
+        bst.insert(new Person("Adam", 47));
+        bst.insert(new Person("Kevin", 21));
+        bst.insert(new Person("Joe", 55));
+        bst.insert(new Person("Arnold", 20));
+        bst.insert(new Person("Noel", 34));
+        bst.insert(new Person("Marko", 68));
+        bst.insert(new Person("Susan", 23));
+        bst.insert(new Person("Rose", 38));
 
-        bst.insert(2);
-        bst.insert(55);
-        bst.insert(67);
-        bst.insert(12);
-        bst.insert(11);
+        System.out.println(bst.getAgesSum());
 
-        System.out.println(bst.getKSmallest(bst.getRoot(), 4));
+//        Tree<Integer> bst = new BinarySearchTree<>();
+//
+//        bst.insert(2);
+//        bst.insert(55);
+//        bst.insert(67);
+//        bst.insert(12);
+//        bst.insert(11);
+//
+//        System.out.println(bst.getKSmallest(bst.getRoot(), 4));
 
 //        Tree<Integer> bst2 = new BinarySearchTree<>();
 //
